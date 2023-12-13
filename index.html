@@ -421,7 +421,7 @@ pagoVFVenc(3038688, 24*40, 0.075/24)</code></pre>
 cada quincena durante 40 años, ¿qué tasa de rendimiento debe tener el
 fondo de inversión?</p>
 <pre class="r"><code>tasaVFVenc = function(VF, t, A){
-  dif = 5000000
+  dif = VF+1
   aprox = 0
   i=1
   while (VF/10000 &lt; dif){
@@ -477,7 +477,7 @@ pagoVFAnt(3048184, 24*40, 0.075/24)</code></pre>
 cada quincena durante 40 años, ¿qué tasa de rendimiento debe tener el
 fondo de inversión?</p>
 <pre class="r"><code>tasaVFAnt = function(VF, t, A){
-  dif = 5000000
+  dif = VF+1
   aprox = 0
   i=1
   while (VF/10000 &lt; dif){
@@ -534,7 +534,7 @@ pagoVAVenc(19349.45, 24*2,0.11/24)</code></pre>
 <p>Una persona debe $19,349.45 si debe pagar 450 pesos quincenales
 durante dos años, ¿qué tasa le están cobrando?</p>
 <pre class="r"><code>tasaVAVenc = function(VA, t, A){
-  dif = 5000000
+  dif = VA + 1
   aprox = 0
   i=1
   while (VA/10000 &lt; dif){
@@ -587,7 +587,7 @@ pagoVAAnt(19438.13, 24*2, 0.11/24)</code></pre>
 <p>Una persona debe $19,438.13 si debe pagar 450 pesos al inicio de cada
 quincena durante dos años, ¿qué tasa le están cobrando?</p>
 <pre class="r"><code>tasaVAAnt = function(VA, t, A){
-  dif = 5000000
+  dif = VA + 1
   aprox = 0
   i=1
   while (VA/10000 &lt; dif){
@@ -646,6 +646,7 @@ pagoVADif = function(VA, t, r, G){
 pagoVADif(18825.77, 2*24, 0.11/24, 1*24/4)</code></pre>
 <pre><code>## [1] 449.9999</code></pre>
 </div>
+https://raw.githubusercontent.com/CesarAyCD/fucionesAnualidades/main/fucionesAnualidades.R
 </div>
 
 
